@@ -1,0 +1,270 @@
+{
+    "scannedDocument": {
+      "scanId": "user-1717227498406",
+      "totalWords": 162,
+      "totalExcluded": 0,
+      "credits": 1,
+      "expectedCredits": 1,
+      "creationTime": "2024-06-01T07:38:21.23133Z",
+      "metadata": { "filename": "user-1717227498406.txt" },
+      "enabled": {
+        "plagiarismDetection": true,
+        "aiDetection": false,
+        "writingFeedback": false,
+        "pdfReport": false,
+        "cheatDetection": false
+      }
+    },
+    "results": {
+      "score": {
+        "identicalWords": 22,
+        "minorChangedWords": 0,
+        "relatedMeaningWords": 0,
+        "aggregatedScore": 13.6
+      },
+      "internet": [
+        {
+          "url": "https://www.lib.sfu.ca/about/overview/community-engagement/gandhi-jayanti",
+          "id": "05f56c01e3",
+          "title": "Celebrate Gandhi Jayanti at SFU | SFU Library",
+          "introduction": "Skip to main content Menu ...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 887,
+          "metadata": { "filename": "gandhi-jayanti" },
+          "tags": []
+        },
+        {
+          "url": "https://www.ungeneva.org/zh/about/director-general/michael-moller/activities/2017/10/book-launch-gandhis-outstanding-leadership",
+          "id": "0e66d4427b",
+          "title": "Book launch “Gandhi’s outstanding leadership” | 联合国日内瓦",
+          "introduction": "跳转到主要内容 欢迎来到联合国,您的世界! ...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 854,
+          "metadata": {
+            "filename": "book-launch-gandhis-outstanding-leadership"
+          },
+          "tags": []
+        },
+        {
+          "url": "https://peopledevelopmentmagazine.com/2024/02/22/power-of-creativity/",
+          "id": "28aece8d04",
+          "title": "How Leaders Harness The Power Of Creativity To Inspire Change",
+          "introduction": "Skip to content About Find A Coach Career Coaching Individual Coaching Leadership/Executive Coaching Life Coaching Man...",
+          "matchedWords": 12,
+          "identicalWords": 12,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 2602,
+          "metadata": {},
+          "tags": []
+        },
+        {
+          "url": "https://counterculture.fandom.com/wiki/Mahatma_Gandhi",
+          "id": "4c3dd74486",
+          "title": "Mahatma Gandhi | CounterCulture | Fandom",
+          "introduction": "CounterCulture Explore ...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 765,
+          "metadata": {
+            "author": "Contributors to CounterCulture",
+            "organization": "Fandom, Inc.",
+            "filename": "Mahatma_Gandhi"
+          },
+          "tags": []
+        },
+        {
+          "url": "https://news.un.org/en/story/2007/06/222502",
+          "id": "4ddc8c554e",
+          "title": "UN declares 2 October, Gandhi’s birthday, as International Day of Non-Violenc...",
+          "introduction": "Skip to main content / navigation Welco...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 699,
+          "metadata": { "filename": "222502" },
+          "tags": []
+        },
+        {
+          "url": "https://indiainsight.in/mahatma-gandhi-the-national-hero/",
+          "id": "4ecba5e745",
+          "title": "Mahatma Gandhi: The Lawyer Who Became a Leader of Nonviolent Resistance | Ind...",
+          "introduction": "Skip to content ...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 2254,
+          "metadata": {},
+          "tags": []
+        },
+        {
+          "url": "https://www.webpages.uidaho.edu/doping2/Lesson%203/lesson3answer5d.html",
+          "id": "54eea607a4",
+          "title": "To Dope or Not To Dope",
+          "introduction": "To Dope or Not To Dope Home Lessons About Us Contact U...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 525,
+          "metadata": { "filename": "lesson3answer5d.html" },
+          "tags": []
+        },
+        {
+          "url": "https://brainly.com/question/9372849",
+          "id": "6f6c8cb59a",
+          "title": "Who was this leader of India often associated with acts of nonviolent resista...",
+          "introduction": "See what teachers have to say about Brainly's new learning tools! WATCH close Skip to main content search Ask Question Ask ...",
+          "matchedWords": 12,
+          "identicalWords": 12,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 909,
+          "metadata": { "filename": "9372849" },
+          "tags": []
+        },
+        {
+          "url": "https://artsandculture.google.com/entity/mahatma-gandhi/m04xfb?hl=en",
+          "id": "729d16a628",
+          "title": "Mahatma Gandhi — Google Arts & Culture",
+          "introduction": "Home Explore Nearby Profile Achievements Collections Themes Experiments Artists Mediums Art movements Historical events Historical f...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 344,
+          "metadata": { "filename": "m04xfb" },
+          "tags": []
+        },
+        {
+          "url": "https://quizlet.com/212964474/people-and-terms-to-know-for-ch-1-4-quiz-flash-cards/",
+          "id": "75da777366",
+          "title": "People and terms to know for Ch. 1-4 Quiz Flashcards | Quizlet",
+          "introduction": "hello quizlet HomeStudy tools Subjects Create Generate Log in Sign up People and terms to know for Ch. 1-...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 805,
+          "metadata": {},
+          "tags": []
+        },
+        {
+          "url": "https://www.unitedway.org/blog/what-would-gandhi-say",
+          "id": "8d7c9969e8",
+          "title": "What Would Gandhi Say? | United Way Worldwide",
+          "introduction": "https://www.unitedway.org/nourishing-community https://www.unitedway.org/resilient-communities × ...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 766,
+          "metadata": { "filename": "what-would-gandhi-say" },
+          "tags": []
+        },
+        {
+          "url": "https://www.classace.io/answers/gandhi-is-often-named-among-the-20th-centurys-most-important-figures-do-you-agree-explain",
+          "id": "a6b1a1bb78",
+          "title": "Answers to: Gandhi is often named among the 20th century’s most important fig...",
+          "introduction": "Open Menu Close Menu Answers Login Free Trial AI Tools Answers BoardsLessonsAppsMembership Login Free Trial AI...",
+          "matchedWords": 14,
+          "identicalWords": 14,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 174,
+          "metadata": {
+            "filename": "gandhi-is-often-named-among-the-20th-centurys-most-important-figures-do-you-agree-explain"
+          },
+          "tags": []
+        },
+        {
+          "url": "https://quizlet.com/833416817/set-32-flash-cards/",
+          "id": "b923ed0aee",
+          "title": "Set 32 Flashcards | Quizlet",
+          "introduction": "hello quizlet HomeStudy tools Subjects Create Generate Log in Sign up Set 32 Flashcards Learn Te...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 1025,
+          "metadata": {},
+          "tags": []
+        },
+        {
+          "url": "https://indiacurrents.com/do-mahatma-gandhi-and-martin-luther-king-jr-still-matter/",
+          "id": "bf8f976ff9",
+          "title": "Do Mahatma Gandhi and Martin Luther King Jr. Still Matter?",
+          "introduction": "Stay in the loop with desi news and stories right from your inbox. Sign up for \"India Currents: Thi...",
+          "matchedWords": 15,
+          "identicalWords": 15,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 1760,
+          "metadata": {
+            "publishDate": "2019-10-07T21:04:55.0000000Z",
+            "creationDate": "2019-10-07T21:04:55.0000000Z",
+            "lastModificationDate": "2022-04-15T12:57:53.0000000Z",
+            "author": "Rajesh C.Oza",
+            "organization": "India Currents"
+          },
+          "tags": []
+        },
+        {
+          "url": "https://webpages.uidaho.edu/doping2/Lesson%203/lesson3answer5a.html",
+          "id": "c478b30b05",
+          "title": "To Dope or Not To Dope",
+          "introduction": "To Dope or Not To Dope Home Lessons About Us Contact U...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 512,
+          "metadata": { "filename": "lesson3answer5a.html" },
+          "tags": []
+        },
+        {
+          "url": "https://www.webpages.uidaho.edu/doping2/Lesson%203/lesson3answer5b.html",
+          "id": "cfa1a4826c",
+          "title": "To Dope or Not To Dope",
+          "introduction": "To Dope or Not To Dope Home Lessons About Us Contact U...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 507,
+          "metadata": { "filename": "lesson3answer5b.html" },
+          "tags": []
+        },
+        {
+          "url": "https://www.webpages.uidaho.edu/doping2/Lesson%203/lesson3answer5c.html",
+          "id": "ecc3e4c8b2",
+          "title": "To Dope or Not To Dope",
+          "introduction": "To Dope or Not To Dope Home Lessons About Us Contact U...",
+          "matchedWords": 10,
+          "identicalWords": 10,
+          "similarWords": 0,
+          "paraphrasedWords": 0,
+          "totalWords": 512,
+          "metadata": { "filename": "lesson3answer5c.html" },
+          "tags": []
+        }
+      ],
+      "database": [],
+      "batch": [],
+      "repositories": []
+    },
+    "notifications": { "alerts": [] },
+    "status": 0,
+    "developerPayload": ""
+  }
+  

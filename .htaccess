@@ -1,0 +1,21 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/public_html/backend"
+PassengerBaseURI "/"
+PassengerNodejs "/public_html/nodevenv/backend/18/bin/node"
+PassengerAppType node
+PassengerStartupFile index.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv APIKEY 537cea13-ed11-42b4-90f2-a0426132256a
+SetEnv COPYLEAKS_API_BASE_URL https://api.copyleaks.com
+SetEnv COPYLEAKS_LOGIN_BASE_URL https://id.copyleaks.com
+SetEnv COPYLEAKS_USER_AGENT node-sdk/3.0
+SetEnv DATABASE u778642913_copyleaksDb
+SetEnv EMAILID skylinechatgpt@gmail.com
+SetEnv HOST localhost
+SetEnv PASSWORD eDy1~HBbk@Qu
+SetEnv STRIPEKEY sk_test_51PBKZlSBTKx24TLsQiKsaz4z3BkvcapCoe487jw0nZvUWsvJjYHFBdtuei9W5N3rf6P9h9R4jBSPkelazJu9Bfub00Q0vpVkSg
+SetEnv USER u778642913_copyleaksDb
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END

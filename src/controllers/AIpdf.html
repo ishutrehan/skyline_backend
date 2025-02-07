@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Content Detection</title>
+  <style>
+
+@page {
+    margin: 20mm; /* Set uniform margins for all pages */
+    padding: 3rem 1.5rem ;
+  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      width: 100%;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .left {
+      width: 50%;
+      font-size: 2rem;
+
+    }
+
+    .right {
+      width: 50%;
+      font-size: 14px;
+    }
+
+    .left2 {
+      width: 50%;
+      font-size: 22px;
+    }
+
+    .right2 {
+      width: 50%;
+      font-size: 22px;
+
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    #title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .filename {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    pre{
+      margin: 10px 0;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 12px solid #8b048b;
+      position: relative;
+    }
+
+    .circle-fill {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #ddd;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: left;
+      transform: rotate(-90deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    #circle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+    .topspace{
+      width: 100%;
+      height: 3rem;
+    }
+	 .black{
+      color: black;
+    }
+    .purple{
+      color: #8b048b;
+    }
+    .yellow{
+      color: #FFD2A0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h1 class="main_head">Analysis Report</h1>
+      <p id="title">AI Detection Report</p>
+      <p id="filename">{{filename}}.pdf</p>
+    </div>
+    <div class="right">
+      <h2>Test Coverage</h2>
+      <div class="circle-container">
+        <div class="circle">
+          <div class="circle-fill" style="transform: rotate(0deg);"></div>
+          <div id="circle-text">{{aipercent}}%</div>
+        </div>
+      </div>
+      <table>
+        <tr>
+          <th></th>
+          <th>Test Coverage</th>
+          <th>Words</th>
+        </tr>
+        <tr>
+          <td><svg width="10" height="10">
+              <circle cx="5" cy="5" r="4" fill="#FFD2A0" stroke="#8174A0" stroke-width="1" />
+            </svg> Total Words</td>
+          <td id=""></td>
+          <td id="total words">{{totalwords}}</td>
+        </tr>
+        <tr>
+          <td><svg width="10" height="10">
+              <circle cx="5" cy="5" r="4" fill="#8b048b" stroke="#8174A0" stroke-width="1" />
+            </svg> AI Text</td>
+          <td id="aipercentage">{{aiper}}%</td>
+          <td id="ainumber">{{aiword}}</td>
+        </tr>
+        
+        <tr>
+          <td><svg width="10" height="10">
+              <circle cx="5" cy="5" r="4" fill="#FFD2A0" stroke="#8174A0" stroke-width="1" />
+            </svg> Human</td>
+          <td id="humanpercentage">{{humanper}}%</td>
+          <td id="humanNumber">{{humanword}}</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>Excluded</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><svg width="10" height="10">
+              <circle cx="5" cy="5" r="4" fill="#FFD2A0" stroke="#8174A0" stroke-width="1" />
+            </svg> Omitted Words</td>
+          <td id="omitted">0</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  <div style="page-break-after: always;"></div>
+  <div class="topspace"></div>
+  <p><b>About AI Detection</b></p>
+  <p>
+    Our AI Detector is the only enterprise-level solution that can verify if the content was written by a human or
+    generated
+    by AI,including source code and text 
+     that has been
+    plagiarized or modified</p>
+  <div class="container">
+    <div class="left2"><svg width="20" height="20">
+        <circle cx="10" cy="10" r="10" fill="#8b048b" stroke="#8174A0" stroke-width="1" />
+      </svg> AI Text</td>
+      <p>
+        A body of text that has been generated or altered by AI technology.
+      </p>
+    </div>
+    <div class="right2"><svg width="20" height="20">
+        <circle cx="10" cy="10" r="10" fill="#FFD2A0" stroke="#8174A0" stroke-width="1" />
+      </svg> Human Text</td>
+      <p>Any text that has been fully written by a human and has not been
+        altered or generated by AI.</p>
+    </div>
+  </div>
+  <p><b>AI Detector Effectiveness</b></p>
+  <p>Credible data at scale,coupled with machine learning and widespread adoption,allows us to continually refine and
+    improve
+    our ability to understand complex text patterns,
+    resulting in over 99% accuracy—far higher than any other AI detector—and improving daily.</p>
+  <p><b>IdealText Length</b></p>
+  <p>
+    The higher the character count,the easier for our technology to determine irregular patterns,which results in a
+    higher
+    confidence rating for AI detection.</p>
+  <p><b>Reasons It Might BeAI When You Think It's Not</b></p>
+  <p>
+    The AI Detector can detect a variety of AI-generated text,including tools that use AI technology to paraphrase
+    content,auto-complete sentences,and more.</p>
+  <p><b>User AI Alert History</b></p>
+  <p>
+    Historical data of how many times a user has been flagged for potentially having AI text within their content. Learn
+    more.</p>
+  <p><b>AI Insights</b></p>
+  <p>
+    The number of times a phrase was found more frequently in AI vs human textis shown according to low,medium,and high
+    frequency.</p>
+
+  <div style="page-break-after: always;"></div>
+  <div class="topspace"></div>
+  <h1> Your Content </h1>
+ <p class="mytext"> {{mytext}}</p>
+
+</body>
+
+</html>
+<!-- const data = {
+modelVersion: "v5",
+results: [
+{
+classification: 2,
+probability: 1,
+matches: [
+{
+text: {
+chars: {
+starts: [0],
+lengths: [1509],
+},
+words: {
+starts: [0],
+lengths: [221],
+},
+},
+},
+],
+},
+],
+summary: {
+human: 0,
+ai: 1,
+},
+scannedDocument: {
+scanId: "check",
+totalWords: 221,
+totalExcluded: 0,
+actualCredits: 1,
+expectedCredits: 1,
+creationTime: "2023-01-10T10:07:58.9459512Z",
+},
+explain: {
+patterns: {
+statistics: {
+aiCount: [
+15.9636, 39.5495, 84.7079, 119.871, 9.9233, 185.667, 14.4536,
+19.1995,
+],
+humanCount: [
+0.8076, 1.5076, 3.8228, 8.5071, 0.3769, 4.2536, 0.3231, 1.1845,
+],
+},
+text: {
+chars: {
+starts: [31, 55, 303, 909, 961, 987, 1129, 1775],
+lengths: [23, 32, 23, 33, 25, 30, 30, 19],
+},
+words: {
+starts: [5, 9, 45, 135, 144, 148, 169, 257],
+lengths: [4, 6, 3, 6, 4, 5, 5, 3],
+},
+},
+},
+},
+}; -->

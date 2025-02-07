@@ -1,0 +1,10 @@
+[
+  {
+    "name": "jwt",
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTczNTYyNDI0MiwiZXhwIjoxNzM1NjM1MDQyfQ.LZD8SoN28uTP7M3OcXRf4mehYCI0HU5zpjbdkwqpHqA",
+    "expiresIn": "3h",
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "strict"
+  }
+]

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Picker API Quickstart</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <p>Picker API API Quickstart</p>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap"></pre>
+    <script type="text/javascript">
+      const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+      const CLIENT_ID =
+        '327003552151-odmbct17ltop2gbgf82t2l7t74c0ns2u.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyCl9Fx4MPG_I2UnMATPoa7Fpx9lnPTGZ1M';
+      const APP_ID = 'driveaccess-43';
+
+      let tokenClient;
+      let accessToken = null;
+      let pickerInited = false;
+      let gisInited = false;
+
+      document.getElementById('authorize_button').style.visibility = 'hidden';
+      document.getElementById('signout_button').style.visibility = 'hidden';
+      function gapiLoaded() {
+        gapi.load('client:picker', initializePicker);
+      }
+      async function initializePicker() {
+        await gapi.client.load(
+          'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'
+        );
+        pickerInited = true;
+        maybeEnableButtons();
+      }
+      function gisLoaded() {
+        tokenClient = google.accounts.oauth2.initTokenClient({
+          client_id: CLIENT_ID,
+          scope: SCOPES,
+          callback: '',
+        });
+        gisInited = true;
+        maybeEnableButtons();
+      }
+
+      function maybeEnableButtons() {
+        if (pickerInited && gisInited) {
+          document.getElementById('authorize_button').style.visibility =
+            'visible';
+        }
+      }
+      function handleAuthClick() {
+        tokenClient.callback = async (response) => {
+          if (response.error !== undefined) {
+            throw response;
+          }
+          accessToken = response.access_token;
+          document.getElementById('signout_button').style.visibility =
+            'visible';
+          document.getElementById('authorize_button').innerText = 'Refresh';
+          await createPicker();
+        };
+
+        if (accessToken === null) {
+          tokenClient.requestAccessToken({ prompt: 'consent' });
+        } else {
+          tokenClient.requestAccessToken({ prompt: '' });
+        }
+      }
+      function handleSignoutClick() {
+        if (accessToken) {
+          accessToken = null;
+          google.accounts.oauth2.revoke(accessToken);
+          document.getElementById('content').innerText = '';
+          document.getElementById('authorize_button').innerText = 'Authorize';
+          document.getElementById('signout_button').style.visibility = 'hidden';
+        }
+      }
+
+      function createPicker() {
+        const view = new google.picker.View(google.picker.ViewId.DOCS);
+        view.setMimeTypes('image/png,image/jpeg,image/jpg,application/pdf');
+        const picker = new google.picker.PickerBuilder()
+          .enableFeature(google.picker.Feature.NAV_HIDDEN)
+          .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+          .setDeveloperKey(API_KEY)
+          .setAppId(APP_ID)
+          .setOAuthToken(accessToken)
+          .addView(view)
+          .addView(new google.picker.DocsUploadView())
+          .setCallback(pickerCallback)
+          .build();
+        picker.setVisible(true);
+      }
+
+      async function pickerCallback(data) {
+        if (data.action === google.picker.Action.PICKED) {
+          let text = `Picker response: \n${JSON.stringify(
+            data.docs,
+            null,
+            2
+          )}\n`;
+          const document = data[google.picker.Response.DOCUMENTS][0];
+          const fileId = document[google.picker.Document.ID];
+          console.log(fileId);
+          const res = await gapi.client.drive.files.get({
+            fileId: fileId,
+            fields: '*',
+          });
+        //   text += `Drive API response for first document: \n${JSON.stringify(
+        //     res.result,
+        //     null,
+        //     2
+        //   )}\n`;
+          window.document.getElementById('content').innerText = text;
+        }
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
+  </body>
+</html>
